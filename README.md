@@ -3,9 +3,9 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/trekhleb/homemade-machine-learning/master?filepath=notebooks)
 [![Build Status](https://travis-ci.org/trekhleb/homemade-machine-learning.svg?branch=master)](https://travis-ci.org/trekhleb/homemade-machine-learning)
 
-_对于此存储库的Octave/MatLab版本，请查看 [machine-learning-octave](https://github.com/trekhleb/machine-learning-octave) 项目。_
+_对于此存储库的Octave/MatLab版本，请查看 [machine-learning-octave](https://github.com/shiguang1120/machine-learning-octave) 项目。_
 
-> 该存储库包含在** Python **中实现的流行机器学习算法的示例，其背后的数学被解释。 每个算法都有交互式** Jupyter Notebook **演示，允许您使用训练数据，算法配置，并立即在浏览器中查看结果，图表和预测**。 在大多数情况下，解释是基于Andrew Ng的[这个伟大的机器学习课程]（https://www.coursera.org/learn/machine-learning）。
+> 该存储库包含在** Python **中实现的流行机器学习算法的示例，其背后的数学被解释。 每个算法都有交互式** Jupyter Notebook **演示，允许您使用训练数据，算法配置，并立即在浏览器中查看结果，图表和预测**。 在大多数情况下，解释是基于Andrew Ng的[这个伟大的机器学习课程](https://www.coursera.org/learn/machine-learning)。
 
 这个存储库的目的是通过使用3个<sup>rd</sup>方库的单行_but_来实现机器学习算法，而不是从头开始实践这些算法，并更好地理解每个算法背后的数学。 这就是为什么所有算法实现都被称为“自制”并且不打算用于生产的原因。
 
@@ -35,12 +35,12 @@ _用法示例: 垃圾邮件过滤器，语言检测，查找类似文档，手�
 
 #### 🤖 Logistic回归
 
-- 📗 [Math | Logistic Regression](homemade/logistic_regression) - 理论和进一步阅读的链接
-- ⚙️ [Code | Logistic Regression](homemade/logistic_regression/logistic_regression.py) - 实施例
-- ▶️ [Demo | Logistic Regression (Linear Boundary)](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/logistic_regression/logistic_regression_with_linear_boundary_demo.ipynb) - 根据`petal_length`和`petal_width`预测虹膜花`class`
-- ▶️ [Demo | Logistic Regression (Non-Linear Boundary)](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/logistic_regression/logistic_regression_with_non_linear_boundary_demo.ipynb) - 根据`param_1`和`param_2`预测微芯片的`validity`
-- ▶️ [Demo | Multivariate Logistic Regression | MNIST](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/logistic_regression/multivariate_logistic_regression_demo.ipynb) - 识别来自`28x28`像素图像的手写数字
-- ▶️ [Demo | Multivariate Logistic Regression | Fashion MNIST](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/logistic_regression/multivariate_logistic_regression_fashion_demo.ipynb) - 识别`28x28`像素图像中的衣服类型
+- 📗 [数学| Logistic回归](homemade/logistic_regression) - 理论和进一步阅读的链接
+- ⚙️ [代码| Logistic回归](homemade/logistic_regression/logistic_regression.py) - 实施例
+- ▶️ [演示| Logistic回归（线性边界）](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/logistic_regression/logistic_regression_with_linear_boundary_demo.ipynb) - 根据`petal_length`和`petal_width`预测虹膜花`class`
+- ▶️ [演示| Logistic回归（非线性边界）](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/logistic_regression/logistic_regression_with_non_linear_boundary_demo.ipynb) - 根据`param_1`和`param_2`预测微芯片的`validity`
+- ▶️ [演示| 多元Logistic回归|MNIST](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/logistic_regression/multivariate_logistic_regression_demo.ipynb) - 识别来自`28x28`像素图像的手写数字
+- ▶️ [演示| 多元Logistic回归|Fashion-MNIST](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/logistic_regression/multivariate_logistic_regression_fashion_demo.ipynb) - 识别`28x28`像素图像中的衣服类型
 
 ## 无监督学习
 

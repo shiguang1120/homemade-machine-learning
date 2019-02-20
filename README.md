@@ -5,7 +5,7 @@
 
 _对于此存储库的Octave/MatLab版本，请查看 [machine-learning-octave](https://github.com/shiguang1120/machine-learning-octave) 项目。_
 
-> 该存储库包含在** Python **中实现的流行机器学习算法的示例，其背后的数学被解释。 每个算法都有交互式** Jupyter Notebook **演示，允许您使用训练数据，算法配置，并立即在浏览器中查看结果，图表和预测**。 在大多数情况下，解释是基于Andrew Ng的[这个伟大的机器学习课程](https://www.coursera.org/learn/machine-learning)。
+> 该存储库包含在**Python**中实现的流行机器学习算法的示例，其背后的数学被解释。 每个算法都有交互式**Jupyter Notebook**演示，允许您使用训练数据，算法配置，并立即在**浏览器**中查看结果，图表和预测。 在大多数情况下，解释是基于Andrew Ng的[这个伟大的机器学习课程](https://www.coursera.org/learn/machine-learning)。
 
 这个存储库的目的是通过使用3个<sup>rd</sup>方库的单行_but_来实现机器学习算法，而不是从头开始实践这些算法，并更好地理解每个算法背后的数学。 这就是为什么所有算法实现都被称为“自制”并且不打算用于生产的原因。
 

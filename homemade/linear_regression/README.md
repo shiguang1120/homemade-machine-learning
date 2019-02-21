@@ -1,74 +1,74 @@
-# Linear Regression
+# 线性回归
 
-## Jupyter Demos
+## Jupyter演示
 
-▶️ [Demo | Univariate Linear Regression](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/linear_regression/univariate_linear_regression_demo.ipynb) - predict `country happiness` score by `economy GDP`
+▶️ [演示| 单变量线性回归](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/linear_regression/univariate_linear_regression_demo.ipynb) - 用`economy GDP`预测`country happiness`得分
 
-▶️ [Demo | Multivariate Linear Regression](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/linear_regression/multivariate_linear_regression_demo.ipynb) - predict `country happiness` score by `economy GDP` and `freedom index`
+▶️ [演示| 多元线性回归](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/linear_regression/multivariate_linear_regression_demo.ipynb) - 用`economy GDP`和`freedom index` 来预测`country happiness`得分
 
-▶️ [Demo | Non-linear Regression](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/linear_regression/non_linear_regression_demo.ipynb) - use linear regression with _polynomial_ and _sinusoid_ features to predict non-linear dependencies.
+▶️ [演示| 非线性回归](https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/linear_regression/non_linear_regression_demo.ipynb) - 使用带有_polynomial_和_sinusoid_特征的线性回归来预测非线性依赖关系
 
-## Definition
+## 定义
 
-**Linear regression** is a linear model, e.g. a model that assumes a linear relationship between the input variables (_x_) and the single output variable (_y_). More specifically, that output variable (_y_) can be calculated from a linear combination of the input variables (_x_).
+**线性回归** 是线性模型，例如假设输入变量(_x_)和单个输出变量(_y_)之间存在线性关系的模型。更具体地，可以从输入变量(_x_)的线性组合计算输出变量(_y_)。
 
 ![Linear Regression](https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg)
 
-On the image above there is an example of dependency between input variable _x_ and output variable _y_. The red line in the above graph is referred to as the best fit straight line. Based on the given data points (training examples), we try to plot a line that models the points the best. In the real world scenario we normally have more than one input variable.
+在上图中，输入变量_x_和输出变量_y_之间存在依赖关系的示例。上图中的红线称为最佳拟合直线。基于给定的数据点（训练示例），我们尝试绘制一条最佳模拟点的线。在现实世界中，我们通常有多个输入变量。
 
-## Features (variables)
+## 功能（变量）
 
-Each training example consists of features (variables) that describe this example (i.e. number of rooms, the square of the apartment etc.)
+每个培训示例都包含描述此示例的特征（变量）（即房间数量，公寓的平方等）
 
 ![Features](../../images/linear_regression/features.svg)
 
-_n_ - number of features
+_n_ - 一些特征
 
-_R<sup>n+1</sup>_ - vector of _n+1_ real numbers
+_R<sup>n+1</sup>_ - _n+1_个实数的向量
 
-## Parameters
+## 参数
 
-Parameters of the hypothesis we want our algorithm to learn in order to be able to do predictions (i.e. predict the price of the apartment).
+假设的参数我们希望我们的算法学习以便能够做预测（即预测公寓的价格）。
 
 ![Parameters](../../images/linear_regression/parameters.svg)
 
-## Hypothesis
+## 假设
 
-The equation that gets features and parameters as an input and predicts the value as an output (i.e. predict the price of the apartment based on its size and number of rooms).
+将特征和参数作为输入并将值预测为输出的等式（即根据房间的大小和数量预测公寓的价格）。
 
 ![Hypothesis](../../images/linear_regression/hypothesis.svg)
 
-For convenience of notation, define _X<sub>0</sub> = 1_
+为方便起见，请定义_X<sub>0</sub> = 1_
 
-## Cost Function
+## 成本函数
 
-Function that shows how accurate the predictions of the hypothesis are with current set of parameters.
+显示假设的预测与当前参数集的准确程度的函数。
 
 ![Cost Function](../../images/linear_regression/cost-function.svg)
 
-_x<sup>i</sup>_ - input (features) of _i<sup>th</sup>_ training example
+_x<sup>i</sup>_ - 第 _i<sup>个</sup>_训练样例的输入（特征）
 
-_y<sup>i</sup>_ - output of _i<sup>th</sup>_ training example
+_y<sup>i</sup>_ - 第 _i<sup>个</sup>_训练样例的输出
 
-_m_ - number of training examples
+_m_ - 训练样例数量
 
-## Batch Gradient Descent
+## 批量梯度下降
 
-Gradient descent is an iterative optimization algorithm for finding the minimum of a cost function described above. To find a local minimum of a function using gradient descent, one takes steps proportional to the negative of the gradient (or approximate gradient) of the function at the current point.
+梯度下降是用于找到上述成本函数的最小值的迭代优化算法。为了使用梯度下降找到函数的局部最小值，需要采用与当前点处函数的梯度（或近似梯度）的负值成比例的步长。
 
-Picture below illustrates the steps we take going down of the hill to find local minimum.
+下面的图片说明了我们从山上下来寻找当地最低限度的步骤。
 
 ![Gradient Descent](https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png)
 
-The direction of the step is defined by derivative of the cost function in current point.
+步骤的方向由当前点的成本函数的导数定义。
 
 ![Gradient Descent](https://cdn-images-1.medium.com/max/1600/0*rBQI7uBhBKE8KT-X.png)
 
-Once we decided what direction we need to go we need to decide what the size of the step we need to take.
+一旦我们决定了我们需要走的方向，我们需要决定我们需要采取的步骤大小。
 
 ![Gradient Descent](https://cdn-images-1.medium.com/max/1600/0*QwE8M4MupSdqA3M4.png)
 
-We need to simultaneously update ![Theta](../../images/linear_regression/theta-j.svg) for _j = 0, 1, ..., n_
+我们需要同时更新西塔[Theta](../../images/linear_regression/theta-j.svg) for _j = 0, 1, ..., n_
 
 ![Gradient Descent](../../images/linear_regression/gradient-descent-1.svg)
 
